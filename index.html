@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BLACKALG</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim" crossorigin="anonymous"></script>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>-->
+	<script src="js/respond.min.js"></script>
+	<style>
+		.text{
+            font-family: 'fangsong';
+            display: inline-block;
+          position: relative;
+          font-size: 40px;
+          height: 60px;
+          line-height: 60px;
+          color: rgb(245, 245, 245);
+        }
+		.text::after{
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 5px;
+            height: 50px;
+            width: 3px;
+            background-color: #fff;
+            animation: san 0.5s steps(1) infinite;
+        }
+        @keyframes san{
+            0%,100%{
+                background-color: #fff;
+            }
+            50%{
+               background-color: transparent;
+            }
+
+        }
+	</style>
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">BLACKALG</a></div>
+				</div>
+		</div>
+		</div>
+	</nav>
+
+<!--	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url();">-->
+<!--		<div class="overlay"></div>-->
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--				<div class="col-md-10 col-md-offset-1 text-center">-->
+<!--					<div class="display-t">-->
+<!--						<div class="display-tc animate-box" data-animate-effect="fadeIn">-->
+<!--							<h1><span class="text" ></span></h1>-->
+<!--							<script>-->
+<!--								const text = document.querySelector('.text');-->
+<!--								 &lt;!&ndash; 定义数组，里面放上文本 &ndash;&gt;-->
+<!--								const txt  =["BLACKALG工作室",'东山再起，卷土重来','BLACKALG致力于创新的硬件和软件开发'];-->
+<!--								&lt;!&ndash; 定义当前要显示的字符串的第几个字符 &ndash;&gt;-->
+<!--								var index=0;-->
+<!--								&lt;!&ndash; 定义文本数组的下标 &ndash;&gt;-->
+<!--								var xiaBiao= 0;-->
+<!--								&lt;!&ndash; 定义huan，拿来判断是要实现打字还是删除字效果，初始为真 &ndash;&gt;-->
+<!--								var huan = true;-->
+<!--							 &lt;!&ndash; 定义一个定时器，200毫秒执行一次 &ndash;&gt;-->
+<!--								setInterval(function(){-->
+<!--								   &lt;!&ndash; huan为真 &ndash;&gt;-->
+<!--									if(huan){-->
+<!--										&lt;!&ndash; 给.text标签添加字符，用.slice方法 &ndash;&gt;-->
+<!--										text.innerHTML = txt[xiaBiao].slice(0,++index);-->
+<!--									}-->
+<!--									else{-->
+<!--									  &lt;!&ndash; 给.text标签删除字符，用.slice方法 &ndash;&gt;-->
+<!--										text.innerHTML = txt[xiaBiao].slice(0,index&#45;&#45;);-->
+<!--									}-->
+
+<!--									&lt;!&ndash; 判断当前index是否为当前字符串长度了+3了 ，+3是为了打完后多等会，多走3个啥也不做的轮回&ndash;&gt;-->
+<!--									if(index==txt[xiaBiao].length+3)-->
+<!--									{-->
+<!--									&lt;!&ndash; huan变为假，开始执行删除文字效果 &ndash;&gt;-->
+<!--										huan = false;-->
+<!--									}-->
+<!--									&lt;!&ndash; 如果删完了 &ndash;&gt;-->
+<!--									else if(index<0)-->
+<!--									{-->
+<!--									&lt;!&ndash; index=0，huan为真，从头开始打字 &ndash;&gt;-->
+<!--										index = 0;-->
+<!--										huan = true;-->
+<!--										&lt;!&ndash; 数组下标加1 &ndash;&gt;-->
+<!--										xiaBiao++;-->
+<!--										if(xiaBiao>=txt.length)-->
+<!--										{-->
+<!--										&lt;!&ndash; 如果数组下标超过了，又回到0 &ndash;&gt;-->
+<!--											xiaBiao=0;-->
+<!--										}-->
+<!--									}-->
+
+<!--								},200)-->
+
+<!--							</script>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</header>-->
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url();">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<div class="display-t">
+						<br><br><br><br>
+						<figure class="figure">
+						  <img src="logo2.png" class="figure-img img-fluid rounded" alt="...">
+						</figure>
+						<br>
+						<h1><span class="text" ></span></h1>
+						<script>
+							const text = document.querySelector('.text');
+							 <!-- 定义数组，里面放上文本 -->
+							const txt  =["BLACKALG工作室",'东山再起，卷土重来','BLACKALG致力于创新的硬件和软件开发'];
+							<!-- 定义当前要显示的字符串的第几个字符 -->
+							var index=0;
+							<!-- 定义文本数组的下标 -->
+							var xiaBiao= 0;
+							<!-- 定义huan，拿来判断是要实现打字还是删除字效果，初始为真 -->
+							var huan = true;
+						 <!-- 定义一个定时器，200毫秒执行一次 -->
+							setInterval(function(){
+							   <!-- huan为真 -->
+								if(huan){
+									<!-- 给.text标签添加字符，用.slice方法 -->
+									text.innerHTML = txt[xiaBiao].slice(0,++index);
+								}
+								else{
+								  <!-- 给.text标签删除字符，用.slice方法 -->
+									text.innerHTML = txt[xiaBiao].slice(0,index--);
+								}
+
+								<!-- 判断当前index是否为当前字符串长度了+3了 ，+3是为了打完后多等会，多走3个啥也不做的轮回-->
+								if(index==txt[xiaBiao].length+3)
+								{
+								<!-- huan变为假，开始执行删除文字效果 -->
+									huan = false;
+								}
+								<!-- 如果删完了 -->
+								else if(index<0)
+								{
+								<!-- index=0，huan为真，从头开始打字 -->
+									index = 0;
+									huan = true;
+									<!-- 数组下标加1 -->
+									xiaBiao++;
+									if(xiaBiao>=txt.length)
+									{
+									<!-- 如果数组下标超过了，又回到0 -->
+										xiaBiao=0;
+									}
+								}
+
+							},200)
+
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+		<div class="row">
+			<div id="fh5co-section">
+				<div class="col-nineth">
+					<div class="row">
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-eye"></i>
+								</span>
+								<div class="desc">
+									<h3>优秀的团队</h3>
+									<p>成立于2023年1月10日，创始者为奥利给！</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-power"></i>
+								</span>
+								<div class="desc">
+									<h3>我们的愿望</h3>
+									<p>希望每个人都能更轻松简单的写代码</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-third">
+							<div class="col-md-12">
+								<span class="icon">
+									<i class="icon-laptop"></i>
+								</span>
+								<div class="desc">
+									<h3>优秀的员工</h3>
+									<p>似乎好像，非常的优秀。。。</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="fh5co-bg-section">
+		<div class="container">
+			<div class="row">
+				<div id="fh5co-features-2">
+					<div class="col-feature-9">
+						<div class="row">
+							<div class="col-md-12 fh5co-heading animate-box">
+								<h2>工作室介绍</h2>
+								<p>BLACKALG工作室于2023年1月10日正式成立，是继奥利给硬件科技工作室被以Tkong组织为首的喷子搞垮以后
+的重建工作室，BLACKALG工作室本质上是对奥利给硬件科技工作室的继承，我们将继承奥利给硬件科技工作室
+的所有技术资本，进一步优化工作室制度，和人员管理，东山再起，卷土重来！关于商标BLACKALG并没有继承
+奥利给硬件科技工作室的商标，而是重新制作了一个新的商标，以下为我们的官方商标：</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-7 col-sm-7 col-md-pull-2 col-sm-pull-2 animate-box" data-animate-effect="fadeInRight">
+								<div class="feature-image">
+									<img src="logo2.png" alt="work">
+								</div>
+							</div>
+							<div class="col-md-5 col-sm-5">
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>我们拥有似乎好像优秀的团队</h3>
+
+									</div>
+								</div>
+
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>我们拥有似乎好像优秀的员工</h3>
+
+									</div>
+								</div>
+
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>我们拥有似乎好像优秀的水平</h3>
+									</div>
+								</div>
+
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>我们拥有似乎好像优秀的产品</h3>
+									</div>
+								</div>
+
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3>我们拥有似乎好像优秀的管理人员</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-feature-3">
+						<div id="fh5co-counter" class="fh5co-bg fh5co-counter">
+							<div class="row">
+								<div class="display-t">
+									<div class="display-tc">
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-from="0" data-to="6" data-speed="5000" data-refresh-interval="50">1</span>
+												<span class="counter-label">工作室管理层人数</span>
+
+											</div>
+										</div>
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-from="0" data-to="19" data-speed="5000" data-refresh-interval="50">1</span>
+												<span class="counter-label">工作室成员人数</span>
+											</div>
+										</div>
+										<div class="col-md-12 animate-box">
+											<div class="feature-center">
+												<span class="counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50">1</span>
+												<span class="counter-label">工作室产品数</span>
+											</div>
+										</div>
+										
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>评论</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote>
+							&ldquo;作为一名员工，在BLACKALG工作室我表示很骄傲。因为他是个非常好的工作室。&rdquo;
+						</blockquote>
+						<p class="author"><cite>SYSTEM-ERROR-LYL</cite></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote>
+							&ldquo;东山再起，卷土重来！&rdquo;
+						</blockquote>
+						<p class="author"><cite>奥利给！</cite></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote>
+							&ldquo;我认为BLACKALG是一个好的工作室。他可以为我们免费提供技术服务。&rdquo;
+						</blockquote>
+						<p class="author"><cite>Coder</cite></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>“编程改变世界，编程创造未来”</h2>
+				</div>
+			</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>BLACKALG STUDIO</h3>
+					<p>东山再起，卷土重来</p>
+					
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li>BLACKALG工作室于2023年1月10日正式成立，是继奥利给硬件科技工作室被以Tkong组织为首的喷子搞垮以后重建的工作室</li>
+					</ul>
+				</div>
+
+				
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">Copyright &copy; 2023 BLACKALG STUDIO.</small> 
+					</p>
+					<p>
+						
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
